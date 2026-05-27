@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text-to-speech"
+version = "0.9.0"
+description = "Conversor de texto em áudio com interface gráfica e de terminal, usando edge-tts."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Eduardo Riguetto (Kralot)" }]
+dependencies = ["edge-tts"]
+
+# Cria o comando de terminal `tts-cli`
+[project.scripts]
+tts-cli = "tts.cli:main"
+
+# Cria `tts-gui`; no Windows abre sem janela de console
+[project.gui-scripts]
+tts-gui = "tts.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

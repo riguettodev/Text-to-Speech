@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.vernv/
+
+# Áudio gerado pelo app
+*.mp3
+
+# Empacotamento (PyInstaller — etapa 2)
+build/
+dist/
+*.spec
